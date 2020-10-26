@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang">Язык</string>
+    <string name="refr">Обновить</string>
+    <string name="sett">Настройки</string>
+    <string name="sett_click">На настройки нажали</string>
+    <string name="button_text">Нажми</string>
+</resources>

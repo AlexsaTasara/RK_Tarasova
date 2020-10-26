@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RK_Tarasova</string>
+    <string name="lang">Language</string>
+    <string name="refr">Refresh</string>
+    <string name="sett">Settings</string>
+    <string name="sett_click">Setting menu item was clicked</string>
+    <string name="my_first_app" translatable="false">My first app</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="button_text">Press</string>
 </resources>
