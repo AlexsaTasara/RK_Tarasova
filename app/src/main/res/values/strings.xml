@@ -7,4 +7,5 @@
     <string name="my_first_app" translatable="false">My first app</string>
     <string name="todo" translatable="false">TODO</string>
     <string name="button_text">Press</string>
+    <string name="hello_blank_fragment">Hellow fragment</string>
 </resources>

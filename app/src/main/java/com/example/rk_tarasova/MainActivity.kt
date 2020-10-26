@@ -1,19 +1,24 @@
 package com.example.rk_tarasova
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
 import android.widget.Toast
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.rk_tarasova.databinding.ActivityMainBinding
 import java.util.*
 import kotlin.collections.ArrayList
 
 private lateinit var recyclerView: RecyclerView
 private lateinit var viewAdapter: RecyclerView.Adapter<*>
 private lateinit var viewManager: RecyclerView.LayoutManager
+private lateinit var binding: ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var listView_details: ListView
@@ -21,7 +26,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val navController = this.findNavController(R.id.test_nav_frag)
+        NavigationUI.setupActionBarWithNavController(this,navController)
+
+        //setContentView(R.layout.activity_main)
+
         val myDataSet: List<String> = listOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
             .map { it -> "item $it" }
         viewManager = LinearLayoutManager(this)
@@ -33,11 +45,15 @@ class MainActivity : AppCompatActivity() {
             layoutManager = viewManager
             adapter = viewAdapter
         }
+
+        //val randomIntent = Intent(this, ChildActivity::class.java)
+
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val item_id = item.getItemId()
         if (item_id == R.id.action_settings){
@@ -62,5 +78,10 @@ class MainActivity : AppCompatActivity() {
             recreate()
             return true
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.test_nav_frag)
+        return navController.navigateUp()
     }
 }
