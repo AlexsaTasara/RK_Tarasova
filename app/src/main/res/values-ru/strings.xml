@@ -5,4 +5,5 @@
     <string name="sett">Настройки</string>
     <string name="sett_click">На настройки нажали</string>
     <string name="button_text">Нажми</string>
+    <string name="hello_blank_fragment">Главное меню</string>
 </resources>

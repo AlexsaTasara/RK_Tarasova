@@ -14,10 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.rk_tarasova.databinding.ActivityMainBinding
 import java.util.*
 import kotlin.collections.ArrayList
-
-private lateinit var recyclerView: RecyclerView
-private lateinit var viewAdapter: RecyclerView.Adapter<*>
-private lateinit var viewManager: RecyclerView.LayoutManager
 private lateinit var binding: ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -31,24 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         val navController = this.findNavController(R.id.test_nav_frag)
         NavigationUI.setupActionBarWithNavController(this,navController)
-
         //setContentView(R.layout.activity_main)
-
-        val myDataSet: List<String> = listOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-            .map { it -> "item $it" }
-        viewManager = LinearLayoutManager(this)
-        viewAdapter = CustomListAdapter()
-        (viewAdapter as CustomListAdapter).data = myDataSet
-
-        recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
-            setHasFixedSize(true)
-            layoutManager = viewManager
-            adapter = viewAdapter
-        }
-
         //val randomIntent = Intent(this, ChildActivity::class.java)
-
     }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)

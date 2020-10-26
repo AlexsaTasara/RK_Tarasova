@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RK_Tarasova</string>
+    <string name="app_name" translatable="false">RK_Tarasova</string>
     <string name="lang">Language</string>
     <string name="refr">Refresh</string>
     <string name="sett">Settings</string>
@@ -7,5 +7,5 @@
     <string name="my_first_app" translatable="false">My first app</string>
     <string name="todo" translatable="false">TODO</string>
     <string name="button_text">Press</string>
-    <string name="hello_blank_fragment">Hellow fragment</string>
+    <string name="hello_blank_fragment">Main menu</string>
 </resources>

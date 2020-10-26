@@ -12,11 +12,19 @@
         <action
                 android:id="@+id/action_hostFragment_to_secondFragment"
                 app:destination="@id/secondFragment"/>
+        <action
+                android:id="@+id/action_hostFragment_to_btmFragment"
+                app:destination="@id/btmFragment"/>
     </fragment>
     <fragment
             android:id="@+id/secondFragment"
             android:name="com.example.rk_tarasova.SecondFragment"
             android:label="fragment_second"
             tools:layout="@layout/fragment_second"/>
+    <fragment
+            android:id="@+id/btmFragment"
+            android:name="com.example.rk_tarasova.BTMFragment"
+            android:label="fragment_btm"
+            tools:layout="@layout/fragment_btm"/>
 
 </navigation>
